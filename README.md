@@ -22,8 +22,6 @@ Example
 
 ### Session Example
 
-::
-
     from stubolib.session import Session
     session = Session(dc='localhost:8001', scenario='myscenario', 
                       session_name='myscenario_session')
@@ -44,10 +42,7 @@ Example
                 "http://weather.yahooapis.com/forecastrss", data='w=1234')                          
          
 
-### API Example
-
-::   
-        
+### API Example  
         
      # A wrapper around the stubo api is provided 
      from stubolib.api import Stubo
@@ -60,8 +55,6 @@ Install
 =======
 
 (Linux)
-
-::
 
     (env) $ git clone git@github.com:Stub-O-Matic/python-client.git
     (env) $ cd stubo_lib/python
