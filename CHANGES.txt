@@ -1,0 +1,8 @@
+python-client changelog
+=======================
+
+0.1
+---
+
+- initial cut
+
