@@ -1,6 +1,8 @@
 Stub-O-Matic Python Client
 ==========================
 
+[![Build Status](https://travis-ci.org/Stub-O-Matic/python-client.png?branch=master)](https://travis-ci.org/Stub-O-Matic/python-client)
+
 python client language binding
 
 stubo api
