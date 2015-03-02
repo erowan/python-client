@@ -16,7 +16,7 @@ session api
 - provide context to hide begin/end session calls 
 - intercept standard http calls with redirect to stubo for record and playback
 - use stubo api internally
-- support save of recording to local disk in addition to put/stub stubo server recording 
+- support save of recording to local disk in addition to put/stub stubo server recording (TODO)
 
 
 Example
@@ -59,7 +59,7 @@ Install
 (Linux)
 
     (env) $ git clone git@github.com:Stub-O-Matic/python-client.git
-    (env) $ cd stubo_lib/python
+    (env) $ cd stubo_lib
     
     Create a python virtual env
     prereqs: virtualenv => $ pip install virtualenv
