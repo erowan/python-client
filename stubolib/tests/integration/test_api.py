@@ -145,17 +145,19 @@ class TestStubo(unittest.TestCase):
         
     def test_put_delete_delay_policy(self):
         stubo = self._get_stubo()  
-        response = stubo.put_delay_policy(name='slow', delay_type='fixed', 
+        import uuid
+        delay = str(uuid.uuid4())
+        response = stubo.put_delay_policy(name=delay, delay_type='fixed', 
                                           milliseconds=2000)
         self.assertEqual(response.status_code, 200)
         self.assertEqual(response.json()['data'],
             {"status": "new", "message": "Put Delay Policy Finished", 
-             "delay_type": "fixed", "name": "slow"})
+             "delay_type": "fixed", "name": "{0}".format(delay)})
         
-        response = stubo.delete_delay_policy(name='slow') 
+        response = stubo.delete_delay_policy(name=delay) 
         self.assertEqual(response.status_code, 200)
         self.assertEqual(response.json()['data'], 
-                         {"message": "Deleted 1 delay policies from [u'slow']"}) 
+            {"message": "Deleted 1 delay policies from [u'{0}']".format(delay)}) 
         
     def test_get_export(self):
         stubo = self._get_stubo()  

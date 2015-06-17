@@ -31,6 +31,7 @@ class StuboAdapter(HTTPAdapter):
           'Stubo-Request-URI'    : request.url,
           'Stubo-Request-Host'   : parts.netloc,
           'Stubo-Request-Method' : request.method, 
+          'Stubo-Request-Headers' : str(request.headers),
         }
         if parts.path:
             info["Stubo-Request-Path"] = parts.path 
